@@ -1,5 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
+(setq python-shell-interpreter "/opt/homebrew/bin/python3"
+      flycheck-python-pycompile-executable "/opt/homebrew/bin/python3"
+      python-shell-exec-path "/opt/homebrew/bin/python3")
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
