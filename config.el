@@ -1,10 +1,9 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-(setq python-shell-interpreter "/opt/homebrew/bin/python3"
-      flycheck-python-pycompile-executable "/opt/homebrew/bin/python3"
-      python-shell-exec-path "/opt/homebrew/bin/python3")
+;;      (setq python-shell-interpreter "/opt/homebrew/bin/python3"
+;;      flycheck-python-pycompile-executable "/opt/homebrew/bin/python3"
+;;      python-shell-exec-path "/opt/homebrew/bin/python3")
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
@@ -77,3 +76,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(use-package! claude-code-ide
+  :bind ("C-c C-'" . claude-code-ide-menu) ; Set your favorite keybinding
+  :config
+  (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
